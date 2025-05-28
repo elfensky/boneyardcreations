@@ -1,0 +1,9 @@
+services:
+    boneyardcreations:
+        container_name: boneyardcreations
+        restart: unless-stopped
+        image: ghcr.io/elfensky/boneyardcreations:dev
+        ports:
+            - "3000:3000"
+        # env_file:
+        #     - .env.docker
