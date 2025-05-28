@@ -2,7 +2,7 @@ name: Automate Release
 on:
     push:
         tags:
-            - '*.*.*' # Triggers on version tags like v1.0.0
+            - "*.*.*" # Triggers on version tags like v1.0.0
 jobs:
     build:
         runs-on: ubuntu-latest
@@ -32,8 +32,8 @@ jobs:
                   platforms: linux/amd64 #,linux/arm64
                   push: true
                   tags: |
-                      ghcr.io/${{ github.repository_owner }}/helldivers1api:${{ github.ref_name }}
-                      ghcr.io/${{ github.repository_owner }}/helldivers1api:latest
+                      ghcr.io/${{ github.repository_owner }}/boneyardcreations:${{ github.ref_name }}
+                      ghcr.io/${{ github.repository_owner }}/boneyardcreations:latest
 
             - name: Create GitHub Release
               uses: softprops/action-gh-release@v2
